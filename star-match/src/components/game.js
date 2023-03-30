@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import utils from '../utils/math-utils';
+// import utils from '../utils/math-utils';
 import PlayNumber from './play-number';
 import StarsDisplay from './stars-display';
 import PlayAgain from './play-again';
+import utils, { colors } from '../utils/math-utils';
+
 
 const useGameState = timeLimit => {
     const [stars, setStars] = useState(utils.random(1, 9));

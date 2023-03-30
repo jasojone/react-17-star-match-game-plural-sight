@@ -1,11 +1,20 @@
 import utils from "../utils/math-utils";
 
-const StarsDisplay = props => (
+const StarsDisplay = ({ count }) => {
+  const skullCount = count > 0 ? count : 0;
+  const skullArray = Array.from({ length: skullCount }, (_, i) => i);
+  return (
     <>
-      {utils.range(1, props.count).map(starId => (
-        <div key={starId} className="star" />
+      {skullArray.map(skullId => (
+        <div key={skullId} className="skull">
+          &#x1F480;
+        </div>
       ))}
     </>
   );
+};
+
+
+
 
   export default StarsDisplay;
